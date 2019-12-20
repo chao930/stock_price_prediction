@@ -17,7 +17,7 @@ dataset['Std_dev']= dataset['Close'].rolling(5).std()
 dataset['RSI'] = talib.RSI(dataset['Close'].values, timeperiod = 9)
 dataset['Williams %R'] = talib.WILLR(dataset['High'].values, dataset['Low'].values, dataset['Close'].values, 7)
 
-
+import tensorflow as tf
 
 dataset['Price_Rise'] = np.where(dataset['Close'].shift(-1) > dataset['Close'], 1, 0)
 
