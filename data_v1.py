@@ -25,4 +25,3 @@ def create_dataset(dataset, look_back=7, foresight=3):
        # Append stock price value occurring 4 time-steps into future
         Y.append(dataset[i + (look_back+foresight), 0])
     return np.array(X), np.array(Y)
-
